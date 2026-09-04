@@ -1,0 +1,114 @@
+/**
+ * ESPACE PRESTATAIRE HAUTE-FIDÉLITÉ (dashboard-provider.html)
+ * Gestion des annonces, galerie de réalisations, statistiques d'impact
+ */
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  margin: 2.5rem 0 5rem;
+  align-items: start;
+}
+
+.dashboard-sidebar {
+  background: #FFFFFF;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 104px;
+}
+
+.dashboard-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard-nav li a {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-sm);
+  color: var(--c-text-body);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.dashboard-nav li a:hover {
+  background: #F8FAFD;
+  color: var(--c-blue-primary);
+}
+
+.dashboard-nav li a.active {
+  background: var(--c-gold-soft);
+  color: #996B10;
+  font-weight: 800;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  padding: 1.85rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.stat-card h4 {
+  font-size: 0.9rem;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+  line-height: 1;
+}
+
+.dashboard-section {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.dashboard-section h2, 
+.dashboard-section h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+}
+
+@media (max-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-sidebar {
+    position: static;
+  }
+}

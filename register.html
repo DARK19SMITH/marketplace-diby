@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Guidée — Plateforme Communautaire | SCE</title>
+  <meta name="description" content="Rejoignez la communauté en moins de 3 minutes comme membre ou prestataire du Service Catholique d'Évangélisation.">
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Notice Bar -->
+  <aside class="top-notice-bar">
+    <span>Service Catholique d'Évangélisation — Amour & Puissance</span>
+    &nbsp;·&nbsp;
+    <span class="highlight">Zéro commission</span> · 100 % direct entre membres
+  </aside>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#E5A93C" stroke-width="2"/>
+            <path d="M12 6v9M9.5 9h5" stroke="#16326E" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SCE <span>MARKETPLACE</span></span>
+          <span class="brand-sub">Amour & Puissance</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-outline">Déjà membre ? Connexion</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="auth-page-wrapper">
+      <div class="auth-container">
+        
+        <div class="auth-header">
+          <h1>Rejoindre la Communauté</h1>
+          <p>Une inscription fraternelle et guidée en moins de 3 minutes.</p>
+        </div>
+
+        <!-- Verset d'accueil -->
+        <div class="bible-verse-banner" style="margin-bottom: 2rem;">
+          <p class="verse-text">« Nous avons des dons différents, selon la grâce qui nous a été accordée. »</p>
+          <span class="verse-ref">— Romains 12:6</span>
+        </div>
+
+        <!-- Indicateur d'étapes -->
+        <div class="steps-indicator">
+          <span class="step active">1. Identité</span>
+          <span class="step">2. Paroisse</span>
+          <span class="step">3. Métier</span>
+        </div>
+
+        <!-- Formulaire d'inscription -->
+        <form class="auth-form" id="register-form">
+          <!-- Étape 1 : Coordonnées -->
+          <div class="form-step">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label for="reg-firstname">Prénom</label>
+                <input type="text" id="reg-firstname" required placeholder="Ex: Jean">
+              </div>
+              <div class="form-group">
+                <label for="reg-lastname">Nom</label>
+                <input type="text" id="reg-lastname" required placeholder="Ex: Kouassi">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-phone">Numéro WhatsApp (pour contact direct)</label>
+              <input type="tel" id="reg-phone" required placeholder="Ex: +225 07 00 00 00 00">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-community">Communauté / Paroisse d'appartenance</label>
+              <select id="reg-community" required>
+                <option value="">Sélectionnez votre paroisse ou cellule</option>
+                <option value="Saint-Jean">Paroisse Saint-Jean (Cocody)</option>
+                <option value="Sainte-Cécile">Paroisse Sainte-Cécile (Marcory)</option>
+                <option value="Coeur-Immacule">Communauté Cœur Immaculé</option>
+                <option value="Cellule-Nord">Cellule Évangélisation Nord</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-city">Quartier de résidence (Abidjan)</label>
+              <input type="text" id="reg-city" required placeholder="Ex: Angré 8ème Tranche">
+            </div>
+
+            <div class="form-group">
+              <label>Statut sur la plateforme</label>
+              <div class="account-type-selector">
+                <label class="account-type-box selected">
+                  <input type="radio" name="account-type" value="member" checked style="display:none;">
+                  <strong>Membre Bénéficiaire</strong>
+                  <p style="font-size:0.75rem; color:var(--c-text-muted); margin-top:0.25rem;">Trouver des services</p>
+                </label>
+                <label class="account-type-box">
+                  <input type="radio" name="account-type" value="provider" style="display:none;">
+                  <strong>Prestataire / Artisan</strong>
+                  <p style="font-size:0.75rem; color:var(--c-text-muted); margin-top:0.25rem;">Proposer mes compétences</p>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-block" style="margin-top:1.5rem; padding:0.95rem;">
+              Valider mon inscription fraternelle
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer" style="background-color:#0B1938; color:#FFFFFF; padding: 3rem 0 1.5rem; border-top:3px solid var(--c-gold-primary); text-align:center;">
+    <div class="container">
+      <p style="font-size:0.9rem; color:#94A3B8;">&copy; 2026 Service Catholique d'Évangélisation — Amour & Puissance.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/modules/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

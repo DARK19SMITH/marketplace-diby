@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Espace Membre — Plateforme Communautaire | SCE</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Notice Bar -->
+  <aside class="top-notice-bar">
+    <span>Service Catholique d'Évangélisation — Amour & Puissance</span>
+    &nbsp;·&nbsp;
+    <span class="highlight">Zéro commission</span> · 100 % direct entre membres
+  </aside>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#E5A93C" stroke-width="2"/>
+            <path d="M12 6v9M9.5 9h5" stroke="#16326E" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SCE <span>MARKETPLACE</span></span>
+          <span class="brand-sub">Amour & Puissance</span>
+        </div>
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="services.html" class="nav-link">Trouver un service</a></li>
+          <li><a href="dashboard-provider.html" class="nav-link">Espace Prestataire</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="btn-logout" class="btn btn-outline" onclick="window.location.href='login.html'">Déconnexion</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Verset du jour personnalisé -->
+    <div class="bible-verse-banner">
+      <p class="verse-text">« Que votre parole soit toujours accompagnée de grâce, assaisonnée de sel, afin que vous sachiez comment répondre à chacun. »</p>
+      <span class="verse-ref">— Colossiens 4:6</span>
+    </div>
+
+    <section style="background:#FFF; padding:2.5rem; border-radius:var(--radius-card); border:1px solid var(--c-border-subtle); box-shadow:var(--shadow-card);">
+      <div style="display:flex; align-items:center; gap:1.5rem; margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--c-border-subtle);">
+        <img src="assets/images/hero_brother_pro.jpg" alt="Photo de profil" style="width:84px; height:84px; border-radius:50%; object-fit:cover; border:3px solid var(--c-gold-primary);">
+        <div>
+          <span class="badge-verified">✓ Membre En Règle SCE</span>
+          <h2 style="font-size:1.6rem; font-weight:800; color:var(--c-text-strong); margin-top:0.35rem;">Jean Kouassi</h2>
+          <p style="color:var(--c-text-muted); font-size:0.92rem;">Paroisse Saint-Jean (Cocody Angré)</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem;">
+        <div style="background:#F8FAFD; padding:1.25rem; border-radius:12px;">
+          <span style="font-size:0.8rem; color:var(--c-text-muted); text-transform:uppercase; font-weight:700;">Téléphone WhatsApp</span>
+          <p style="font-size:1.05rem; font-weight:700; color:var(--c-text-strong); margin-top:0.25rem;">+225 07 00 00 00 00</p>
+        </div>
+        <div style="background:#F8FAFD; padding:1.25rem; border-radius:12px;">
+          <span style="font-size:0.8rem; color:var(--c-text-muted); text-transform:uppercase; font-weight:700;">Quartier de résidence</span>
+          <p style="font-size:1.05rem; font-weight:700; color:var(--c-text-strong); margin-top:0.25rem;">Cocody, Abidjan</p>
+        </div>
+        <div style="background:#F8FAFD; padding:1.25rem; border-radius:12px;">
+          <span style="font-size:0.8rem; color:var(--c-text-muted); text-transform:uppercase; font-weight:700;">Statut Prestataire</span>
+          <p style="font-size:1.05rem; font-weight:700; color:var(--c-emerald-primary); margin-top:0.25rem;">Actif & Validé</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="dashboard-provider.html" class="btn btn-gold">Accéder à mon tableau de bord prestataire</a>
+        <a href="service-detail.html" class="btn btn-outline">Voir ma vitrine publique</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer" style="background-color:#0B1938; color:#FFFFFF; padding: 3rem 0 1.5rem; border-top:3px solid var(--c-gold-primary); text-align:center;">
+    <div class="container">
+      <p style="font-size:0.9rem; color:#94A3B8;">&copy; 2026 Service Catholique d'Évangélisation — Amour & Puissance.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/modules/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

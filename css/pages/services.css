@@ -1,0 +1,162 @@
+/**
+ * ANNUAIRE DES SERVICES HAUTE-FIDÉLITÉ (services.html)
+ * Filtres latéraux, barre de tri, cartes prestataires avec badges vérifiés
+ */
+
+.services-page-header {
+  padding: 3rem 0 1.5rem;
+}
+
+.services-page-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+  margin-bottom: 0.5rem;
+}
+
+.services-page-sub {
+  color: var(--c-text-muted);
+  font-size: 1.05rem;
+}
+
+.services-layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 2.5rem;
+  margin: 2rem 0 5rem;
+  align-items: start;
+}
+
+/* Sidebar des filtres */
+.filters-sidebar {
+  background: var(--c-surface);
+  padding: 1.85rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 104px;
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--c-border-subtle);
+}
+
+.filters-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+}
+
+.filters-reset-btn {
+  background: transparent;
+  border: none;
+  color: var(--c-blue-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filters-group {
+  margin-bottom: 1.5rem;
+}
+
+.filters-group label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+  margin-bottom: 0.5rem;
+}
+
+.filters-group select,
+.filters-group input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--c-border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--c-text-strong);
+  background: #F8FAFD;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filters-group select:focus,
+.filters-group input[type="text"]:focus {
+  border-color: var(--c-gold-primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(229, 169, 60, 0.2);
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--c-gold-primary);
+  cursor: pointer;
+}
+
+/* En-tête des résultats */
+.services-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.services-count-badge {
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+}
+
+.services-count-badge strong {
+  color: var(--c-text-strong);
+}
+
+.sort-wrapper select {
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-capsule);
+  border: 1px solid var(--c-border-subtle);
+  background: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--c-text-strong);
+  outline: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Grille des services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 992px) {
+  .services-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: static;
+  }
+}

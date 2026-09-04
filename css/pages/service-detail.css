@@ -1,0 +1,212 @@
+/**
+ * FICHE DÉTAILLÉE PRESTATAIRE HAUTE-FIDÉLITÉ (service-detail.html)
+ * Profil, actions WhatsApp direct & Appel, galerie de réalisations, avis vérifiés
+ */
+
+.provider-header {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.provider-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--c-gold-primary) 0%, var(--c-blue-primary) 100%);
+}
+
+.provider-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.provider-main-info {
+  flex: 1;
+}
+
+.badges-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.provider-category {
+  background: #F1F5F9;
+  color: var(--c-text-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-capsule);
+}
+
+.provider-main-info h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+  margin-bottom: 0.35rem;
+}
+
+.provider-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--c-gold-hover);
+  margin-bottom: 0.65rem;
+}
+
+.provider-meta {
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.provider-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Corps du profil */
+.provider-body {
+  margin: 2.5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-service-info {
+  background: #FFFFFF;
+  padding: 2.25rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.card-service-info h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.provider-portfolio {
+  background: #FFFFFF;
+  padding: 2.25rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.provider-portfolio h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 180px;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--c-border-subtle);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Avis */
+.reviews-section {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.reviews-section h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.review-item {
+  background: #F8FAFD;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--c-border-subtle);
+}
+
+.review-author-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.report-wrapper {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #F1F5F9;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .provider-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .provider-meta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .provider-actions {
+    justify-content: center;
+  }
+}

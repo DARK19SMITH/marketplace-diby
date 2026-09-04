@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion — Plateforme Communautaire | SCE</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Notice Bar -->
+  <aside class="top-notice-bar">
+    <span>Service Catholique d'Évangélisation — Amour & Puissance</span>
+    &nbsp;·&nbsp;
+    <span class="highlight">Zéro commission</span> · 100 % direct entre membres
+  </aside>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#E5A93C" stroke-width="2"/>
+            <path d="M12 6v9M9.5 9h5" stroke="#16326E" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SCE <span>MARKETPLACE</span></span>
+          <span class="brand-sub">Amour & Puissance</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="register.html" class="btn btn-outline">Pas encore inscrit ? Créer un compte</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="auth-page-wrapper">
+      <div class="auth-container">
+        
+        <div class="auth-header">
+          <h1>Connexion</h1>
+          <p>Accédez à votre espace membre et à vos services</p>
+        </div>
+
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label for="login-phone">Numéro de téléphone</label>
+            <input type="tel" id="login-phone" required placeholder="Ex: +225 07 00 00 00 00">
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Code d'accès ou mot de passe</label>
+            <input type="password" id="login-password" required placeholder="••••••••">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="padding:0.95rem; margin-top:1.5rem;">
+            Se connecter à mon espace
+          </button>
+        </form>
+
+        <div style="margin-top: 2rem; text-align: center; font-size:0.9rem;">
+          <a href="dashboard-provider.html" style="color:var(--c-gold-hover); font-weight:700;">
+            Accès direct Démo : Espace Prestataire &rarr;
+          </a>
+          <br><br>
+          <a href="admin.html" style="color:var(--c-blue-primary); font-weight:700;">
+            Accès direct Démo : Console Pastorale &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer" style="background-color:#0B1938; color:#FFFFFF; padding: 3rem 0 1.5rem; border-top:3px solid var(--c-gold-primary); text-align:center;">
+    <div class="container">
+      <p style="font-size:0.9rem; color:#94A3B8;">&copy; 2026 Service Catholique d'Évangélisation — Amour & Puissance.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/modules/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

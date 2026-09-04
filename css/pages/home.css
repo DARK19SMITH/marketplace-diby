@@ -1,0 +1,456 @@
+/**
+ * PAGE D'ACCUEIL CINÉMATOGRAPHIQUE & INTERACTIVE
+ * Composition 1:1 Pixel-Perfect inspirée de la capture
+ */
+
+/* ========================================================
+   1. SECTION HERO COMPLÈTE
+   ======================================================== */
+.hero-experience {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  padding: 3.5rem 0 5rem;
+  background-color: var(--c-canvas);
+  overflow: hidden;
+}
+
+/* Filigrane d'adoration & célébration communautaire */
+.hero-experience::before {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -20px;
+  width: 550px;
+  height: 420px;
+  background-image: radial-gradient(circle at center, rgba(229, 169, 60, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Grille Hero 2 Colonnes (Gauches & Droite) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Colonne Gauche : Titres & Moteur */
+.hero-left-content {
+  position: relative;
+}
+
+/* Badge Communautaire Supérieur */
+.hero-community-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 0.4rem 1rem 0.4rem 0.5rem;
+  border-radius: var(--radius-capsule);
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 1.75rem;
+}
+
+.pill-live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22C55E;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  animation: pulseLive 2s infinite;
+}
+
+@keyframes pulseLive {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.pill-live-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+  letter-spacing: 0.3px;
+}
+
+/* Grand Titre de la capture : Connecting Believers / Unir les Talents */
+.hero-headline {
+  font-size: clamp(2.8rem, 4.8vw, 4.4rem);
+  font-weight: 800;
+  color: var(--c-text-strong);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline .text-gold {
+  color: var(--c-gold-primary);
+  display: inline-block;
+  position: relative;
+}
+
+.hero-headline .text-blue {
+  color: var(--c-blue-primary);
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  color: var(--c-text-body);
+  max-width: 540px;
+  line-height: 1.55;
+  margin-bottom: 2rem;
+}
+
+/* Indicateur de confiance sous le search */
+.trust-indicators-row {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #EDF2F7;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--c-text-strong);
+}
+
+.trust-item-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-gold-soft);
+  color: var(--c-gold-primary);
+  font-size: 0.85rem;
+}
+
+/* ========================================================
+   2. SECTION 10 DOMAINES (BENTO GRID)
+   ======================================================== */
+.section-domains {
+  padding: 6rem 0;
+  background: #FFFFFF;
+}
+
+.section-head-center {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.section-tag {
+  display: inline-block;
+  background: var(--c-gold-soft);
+  color: #A06B08;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-capsule);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--c-text-strong);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--c-text-muted);
+}
+
+/* ========================================================
+   3. SECTION EXPÉRIENCE DIRECTE (SANS COMMISSION)
+   ======================================================== */
+.section-comparison {
+  padding: 6rem 0;
+  background: var(--c-canvas);
+  position: relative;
+}
+
+.comparison-box {
+  background: #FFFFFF;
+  border-radius: 32px;
+  border: 1px solid var(--c-border-subtle);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.comparison-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.comparison-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-check-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ECFDF5;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Bannière Interactive WhatsApp Showcase */
+.wa-showcase-visual {
+  background: linear-gradient(135deg, #0B1938 0%, #16326E 100%);
+  border-radius: 24px;
+  padding: 2.5rem;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+
+.wa-showcase-visual::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 211, 102, 0.25) 0%, transparent 70%);
+}
+
+.wa-showcase-tag {
+  background: rgba(37, 211, 102, 0.2);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #25D366;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-capsule);
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.wa-bubble-preview {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+}
+
+/* ========================================================
+   4. SECTION PRESTATAIRES VÉRIFIÉS EN VEDETTE
+   ======================================================== */
+.section-verified-members {
+  padding: 6rem 0;
+  background: #FFFFFF;
+}
+
+.verified-members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* ========================================================
+   5. SECTION ADN SPIRITUEL & LITURGIQUE
+   ======================================================== */
+.section-spiritual-dna {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #FBF8F1 0%, #FFFFFF 100%);
+  border-top: 1px solid rgba(229, 169, 60, 0.25);
+  border-bottom: 1px solid rgba(229, 169, 60, 0.25);
+}
+
+.spiritual-tabs-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.spiritual-tab-btn {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-capsule);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--c-text-body);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.spiritual-tab-btn.active, .spiritual-tab-btn:hover {
+  background: var(--c-gold-primary);
+  border-color: var(--c-gold-primary);
+  color: #FFFFFF;
+}
+
+/* ========================================================
+   6. APPEL À L'ACTION FINAL
+   ======================================================== */
+.cta-banner-final {
+  background: linear-gradient(135deg, #0B1938 0%, #16326E 60%, #0D2456 100%);
+  border-radius: 36px;
+  padding: 5rem 3rem;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  margin: 4rem auto 6rem;
+}
+
+.cta-banner-final::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 169, 60, 0.25) 0%, transparent 70%);
+}
+
+.cta-banner-title {
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+}
+
+.cta-banner-title span {
+  color: var(--c-gold-primary);
+}
+
+.cta-banner-sub {
+  font-size: 1.2rem;
+  color: #D3E0F3;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.cta-actions-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-white {
+  background: #FFFFFF;
+  color: var(--c-blue-primary);
+  font-weight: 700;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-capsule);
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-white:hover {
+  background: #F4F7FB;
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+   7. RESPONSIVE POUR HOME
+   ======================================================== */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .hero-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-subtext {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-search-instrument {
+    width: 100%;
+  }
+
+  .trust-indicators-row {
+    justify-content: center;
+  }
+
+  .comparison-box {
+    grid-template-columns: 1fr;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .capsules-grid {
+    gap: 0.75rem;
+  }
+
+  .capsule-column {
+    gap: 0.75rem;
+  }
+
+  .capsule-card.size-tall {
+    height: 190px;
+  }
+
+  .capsule-card.size-medium {
+    height: 150px;
+  }
+
+  .capsule-card.size-compact {
+    height: 130px;
+  }
+
+  .hero-search-instrument {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+
+  .btn-search-trigger {
+    width: 100%;
+    justify-content: center;
+  }
+}

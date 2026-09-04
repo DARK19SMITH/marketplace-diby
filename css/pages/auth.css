@@ -1,0 +1,152 @@
+/**
+ * AUTHENTIFICATION HAUTE-FIDÉLITÉ (login.html, register.html)
+ * Inscription guidée en étapes, ancrage paroissial, connexion fluide
+ */
+
+.auth-page-wrapper {
+  padding: 3rem 0 5rem;
+}
+
+.auth-container {
+  max-width: 540px;
+  margin: 2rem auto 4rem;
+  background: #FFFFFF;
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--c-border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--c-gold-primary), var(--c-blue-primary));
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--c-text-strong);
+  margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+  color: var(--c-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Indicateur d'étapes */
+.steps-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.25rem;
+  background: #F8FAFD;
+  padding: 0.5rem;
+  border-radius: var(--radius-capsule);
+  border: 1px solid var(--c-border-subtle);
+}
+
+.steps-indicator .step {
+  flex: 1;
+  text-align: center;
+  padding: 0.55rem 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  border-radius: var(--radius-capsule);
+  transition: all 0.25s ease;
+}
+
+.steps-indicator .step.active {
+  background: var(--c-gold-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(229, 169, 60, 0.35);
+}
+
+.form-step {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-step legend {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--c-blue-dark);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #F1F5F9;
+  width: 100%;
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--c-text-strong);
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="tel"],
+.auth-form input[type="password"],
+.auth-form input[type="email"],
+.auth-form select,
+.auth-form textarea {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid var(--c-border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--c-text-strong);
+  background: #F8FAFD;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.auth-form input:focus,
+.auth-form select:focus,
+.auth-form textarea:focus {
+  border-color: var(--c-gold-primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(229, 169, 60, 0.2);
+}
+
+.account-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.account-type-box {
+  border: 1.5px solid var(--c-border-subtle);
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #F8FAFD;
+}
+
+.account-type-box:hover,
+.account-type-box.selected {
+  border-color: var(--c-gold-primary);
+  background: var(--c-gold-soft);
+}

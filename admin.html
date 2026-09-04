@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console Pastorale & Direction — SCE</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/admin.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Notice Bar -->
+  <aside class="top-notice-bar">
+    <span>Service Catholique d'Évangélisation — Direction Pastorale & Conseil</span>
+    &nbsp;·&nbsp;
+    <span class="highlight">Console d'Administration</span> · Modération & Évangélisation
+  </aside>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <div class="brand-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#E5A93C" stroke-width="2"/>
+            <path d="M12 6v9M9.5 9h5" stroke="#16326E" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SCE <span>PASTORALE</span></span>
+          <span class="brand-sub">Console de Modération</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-outline" target="_blank">Voir le site public</a>
+        <a href="login.html" class="btn btn-outline">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="admin-layout">
+      <!-- Navigation latérale -->
+      <aside class="admin-sidebar">
+        <h3>Direction Pastorale</h3>
+        <ul style="list-style:none; margin-top:1.5rem; display:flex; flex-direction:column; gap:0.85rem;">
+          <li><a href="#stats" style="color:#FFF; font-weight:700; font-size:0.95rem;">📊 Statistiques en temps réel</a></li>
+          <li><a href="#validation" style="color:#D3E0F3; font-size:0.95rem;">🛡️ Validation des profils</a></li>
+          <li><a href="#versets" style="color:#D3E0F3; font-size:0.95rem;">📖 Programmation liturgique</a></li>
+          <li><a href="#reports" style="color:#D3E0F3; font-size:0.95rem;">⚠️ Traitement des signalements</a></li>
+        </ul>
+      </aside>
+
+      <!-- Zone principale -->
+      <section class="admin-main">
+        <!-- Stats -->
+        <div class="stats-grid" id="stats">
+          <div class="stat-card">
+            <h4>Membres actifs</h4>
+            <p class="stat-value" style="color:var(--c-blue-primary);">128</p>
+          </div>
+          <div class="stat-card">
+            <h4>Services publiés</h4>
+            <p class="stat-value" style="color:var(--c-gold-hover);">46</p>
+          </div>
+          <div class="stat-card">
+            <h4>Demandes de validation</h4>
+            <p class="stat-value" style="color:var(--c-emerald-primary);">3</p>
+          </div>
+        </div>
+
+        <!-- Validation Prestataires -->
+        <div style="background:#FFF; padding:2rem; border-radius:var(--radius-card); border:1px solid var(--c-border-subtle); box-shadow:var(--shadow-card); margin-bottom:2.5rem;" id="validation">
+          <h2 style="font-size:1.35rem; font-weight:800; color:var(--c-text-strong); margin-bottom:1.25rem;">
+            Attribution du Badge « Membre Vérifié SCE »
+          </h2>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Membre candidat</th>
+                <th>Paroisse</th>
+                <th>Métier</th>
+                <th>Téléphone</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Frère Marc Antoine</strong></td>
+                <td>Paroisse Saint-Jean</td>
+                <td>Électricien bâtiment</td>
+                <td>+225 07 11 22 33 44</td>
+                <td>
+                  <button class="btn btn-gold" style="padding:0.4rem 0.9rem; font-size:0.8rem;">Valider le Badge</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Sœur Blandine T.</strong></td>
+                <td>Paroisse Sainte-Cécile</td>
+                <td>Professeur de Français</td>
+                <td>+225 07 55 66 77 88</td>
+                <td>
+                  <button class="btn btn-gold" style="padding:0.4rem 0.9rem; font-size:0.8rem;">Valider le Badge</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Programmation des Versets Bibliques -->
+        <div class="verse-manager-card" id="versets">
+          <h2 style="font-size:1.35rem; font-weight:800; color:var(--c-text-strong); margin-bottom:0.5rem;">
+            Gestion Liturgique des Versets Bibliques
+          </h2>
+          <p style="color:var(--c-text-muted); font-size:0.92rem; margin-bottom:1.5rem;">
+            Alimentez les versets diffusés sur la page d'accueil et les fiches selon les temps forts liturgiques.
+          </p>
+          
+          <div style="background:#F8FAFD; padding:1.25rem; border-radius:12px; border:1px solid var(--c-border-subtle);">
+            <p style="font-family:var(--font-serif); font-style:italic; font-size:1.1rem; color:var(--c-blue-dark);">
+              « Que chacun mette au service des autres le don qu'il a reçu... » — 1 Pierre 4:10
+            </p>
+            <span class="badge-verified" style="margin-top:0.75rem;">Programmé pour : Accueil (Vocation)</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer" style="background-color:#0B1938; color:#FFFFFF; padding: 3rem 0 1.5rem; border-top:3px solid var(--c-gold-primary); text-align:center;">
+    <div class="container">
+      <p style="font-size:0.9rem; color:#94A3B8;">&copy; 2026 Direction Pastorale — Service Catholique d'Évangélisation.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/modules/admin.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
